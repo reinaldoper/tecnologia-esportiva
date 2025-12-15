@@ -8,6 +8,12 @@ export class AffiliatesService {
   constructor(private prisma: PrismaService) {}
 
   async create(dto: CreateAffiliateDto) {
+    const affiliate = await this.prisma.affiliate.findUnique({
+      where: { codigo: dto.codigo },
+    });
+    if (affiliate) {
+      throw new NotFoundException('Código de afiliado duplicado');
+    }
     return this.prisma.affiliate.create({
       data: {
         nome: dto.nome,
