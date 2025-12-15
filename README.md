@@ -104,6 +104,14 @@ docker-compose up -d
 
 ---
 
+4. A aplicação estará rodando:
+
+```bash
+http://localhost:3000
+```
+
+---
+
 ### Isso irá subir:
 
 - db → PostgreSQL
