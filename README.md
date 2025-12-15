@@ -194,3 +194,12 @@ docker compose exec backend npm run test
 docker compose exec backend npm run test:cov
 
 ```
+
+### Testar o frontend:
+
+- Na raiz do projeto:
+
+```bash
+docker compose exec frontend npm run test
+
+```
