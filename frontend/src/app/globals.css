@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.wave-bg {
+  background: linear-gradient(270deg, #00ff99, #0099ff);
+  background-size: 400% 400%;
+  animation: wave 15s ease infinite;
+}
+
+@keyframes wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
