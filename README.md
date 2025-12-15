@@ -26,22 +26,22 @@ A aplicação salva o usuário atual com JWT no cookie da sessão.
 
 ```bash
 .
-├── dist
-│   ├── affiliates
-│   ├── auth
-│   ├── members
-│   ├── plan
-│   ├── prisma
-│   └── users
 ├── prisma
 │   └── migrations
+│       └── 20251212023138_init
 ├── src
 │   ├── affiliates
+│   │   └── dto
 │   ├── auth
+│   │   ├── dto
+│   │   └── guards
 │   ├── members
+│   │   └── dto
 │   ├── plan
+│   │   └── dto
 │   ├── prisma
 │   └── users
+│       └── dto
 └── test
 ```
 
@@ -53,6 +53,14 @@ A aplicação salva o usuário atual com JWT no cookie da sessão.
 ├── public
 ├── src
 │   ├── app
+│   │   ├── affiliates
+│   │   │   └── components
+│   │   ├── login
+│   │   ├── members
+│   │   │   └── components
+│   │   ├── plans
+│   │   │   └── components
+│   │   └── register
 │   ├── components
 │   ├── context
 │   ├── hooks
