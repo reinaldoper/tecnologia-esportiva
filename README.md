@@ -15,6 +15,7 @@ A aplicação salva o usuário atual com JWT no cookie da sessão.
 - **Frontend:** [Next.js](https://nextjs.org/) + [TypeScript](https://www.typescriptlang.org/)
 - **Documentação:** [Swagger](https://swagger.io/)
 - **Infra:** Docker + Docker Compose
+- **ContextApi** [ContextApi](https://pt-br.legacy.reactjs.org/docs/context.html)
 
 ---
 

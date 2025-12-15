@@ -72,7 +72,7 @@ describe('AuthController', () => {
     const result = await controller.login(dto, res);
 
     expect(result).toEqual({
-      message: 'Login successful',
+      message: 'Login realizado com sucesso',
       access_token: 'token123',
     });
 

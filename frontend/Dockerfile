@@ -1,4 +1,4 @@
-# Usa Node.js LTS
+
 FROM node:20-alpine
 
 WORKDIR /appfrontend
