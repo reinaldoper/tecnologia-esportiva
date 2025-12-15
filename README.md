@@ -8,7 +8,8 @@ A aplicação salva o usuário atual com JWT no cookie da sessão.
 
 ---
 
-## 
+## Requerimentos
+- Node >=20
 
 ## 🧩 Tecnologias utilizadas
 - **Backend:** [NestJS](https://nestjs.com/) + [Prisma](https://www.prisma.io/) + [PostgreSQL](https://www.postgresql.org/)
