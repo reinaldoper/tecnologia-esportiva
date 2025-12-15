@@ -48,7 +48,7 @@ export default function PlanList() {
                   <td className="p-2">{plan.nome}</td>
                   <td className="p-2">R$ {plan.precoMensal}</td>
                   <td className="p-2">{plan.beneficios}</td>
-                  <td className="p-2 text-center">
+                  <td className="p-2 text-center flex gap-2 justify-center">
                     <button
                       onClick={() => setEditingPlan(plan)}
                       className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
