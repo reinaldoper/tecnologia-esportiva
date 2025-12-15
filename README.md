@@ -21,6 +21,7 @@ O propósito é avaliar qualidade técnica, arquitetura, organização, boas pr�
 
 - /backend 
 
+```bash
 .
 ├── dist
 │   ├── affiliates
@@ -39,10 +40,24 @@ O propósito é avaliar qualidade técnica, arquitetura, organização, boas pr�
 │   ├── prisma
 │   └── users
 └── test
+```
 
 ---
 
 - /frontend
+
+```bash
+├── public
+├── src
+│   ├── app
+│   ├── components
+│   ├── context
+│   ├── hooks
+│   ├── provider
+│   ├── services
+│   └── types
+└── __tests__
+```
 
 
 ---
