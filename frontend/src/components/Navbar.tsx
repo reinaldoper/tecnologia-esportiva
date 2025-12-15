@@ -56,7 +56,7 @@ export default function Navbar() {
           <Link href="/plans" className="hover:underline">Planos</Link>
           <Link href="/members" className="hover:underline">Sócios</Link>
           <Link href="/affiliates" className="hover:underline">Afiliados</Link>
-          <Link href="/" className="hover:underline">Home</Link>
+          {pathname !== '/' && (<Link href="/" className="hover:underline">Home</Link>)}
 
 
           <div className="flex items-center gap-2">
