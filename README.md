@@ -3,7 +3,8 @@
 ## 🎯 Objetivo
 Construir uma aplicação fullstack simples para gerenciar sócios-torcedores e programas de afiliação, permitindo visualizar, cadastrar e relacionar sócios aos planos disponíveis.
 
-O propósito é avaliar qualidade técnica, arquitetura, organização, boas práticas e clareza de comunicação.
+O usuário só terá acesso a aplicação, mediante cadastro inicial e ser logado na aplicação.
+A aplicação salva o usuário atual com JWT no cookie da sessão.
 
 ---
 
