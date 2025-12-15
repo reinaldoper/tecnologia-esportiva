@@ -1,7 +1,7 @@
 "use client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import api from "@/services/api";
-import { Member } from "@/types/members";
+import { Member, MemberFormData } from "@/types/members";
 
 export function useFetchMembers(page = 1, limit = 10) {
   return useQuery({
@@ -42,8 +42,8 @@ export function useUpdateMember() {
   const queryClient = useQueryClient();
 
   return useMutation<Member, Error, Member>({
-    mutationFn: async (member) => {
-      const res = await api.patch<Member>(`/members/${member.id}`, member);
+    mutationFn: async ({ id, ...data }: { id: number } & MemberFormData) => {
+      const res = await api.patch<Member>(`/members/${id}`, data);
       return res.data;
     },
     onSuccess: () => {
