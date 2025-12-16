@@ -3,12 +3,17 @@ import { useDeletePlan, useFetchPlansPaginated } from "@/hooks/usePlans";
 import { Plan } from "@/types/plan";
 import PlanForm from "./PlanForm";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function PlanList() {
   const [page, setPage] = useState(1);
   const limit = 10;
 
-  const { data: plans, isLoading, isError } = useFetchPlansPaginated(page, limit);
+  const {
+    data: plans,
+    isLoading,
+    isError,
+  } = useFetchPlansPaginated(page, limit);
   const deletePlan = useDeletePlan();
   const [editingPlan, setEditingPlan] = useState<Plan | null>(null);
 
@@ -43,7 +48,7 @@ export default function PlanList() {
               </tr>
             </thead>
             <tbody>
-              {plans?.data.map((plan : Plan) => (
+              {plans?.data.map((plan: Plan) => (
                 <tr key={plan.id} className="border-t">
                   <td className="p-2">{plan.nome}</td>
                   <td className="p-2">R$ {plan.precoMensal}</td>
@@ -61,6 +66,12 @@ export default function PlanList() {
                     >
                       Excluir
                     </button>
+                    <Link
+                      href={`/plans/${plan.id}`}
+                      className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
+                    >
+                      Detalhes
+                    </Link>
                   </td>
                 </tr>
               ))}

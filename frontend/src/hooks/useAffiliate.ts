@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import api from "@/services/api";
-import { Affiliate, AffiliateUpdateData, PaginatedAffiliates } from "@/types/affiliate";
+import { Affiliate, AffiliateFindId, AffiliateUpdateData, PaginatedAffiliates } from "@/types/affiliate";
 
 export function useCreateAffiliate() {
   const queryClient = useQueryClient();
@@ -28,10 +28,10 @@ export function useFetchAffiliates(page = 1, limit = 10) {
 }
 
 export function useFetchAffiliate(id: number) {
-  return useQuery<Affiliate, Error>({
+  return useQuery<AffiliateFindId, Error>({
     queryKey: ["affiliate", id],
     queryFn: async () => {
-      const res = await api.get<Affiliate>(`/affiliates/${id}`);
+      const res = await api.get<AffiliateFindId>(`/affiliates/${id}`);
       return res.data;
     },
     enabled: !!id,

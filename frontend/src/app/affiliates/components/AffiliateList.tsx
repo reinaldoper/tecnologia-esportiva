@@ -3,17 +3,26 @@ import { useDeleteAffiliate, useFetchAffiliates } from "@/hooks/useAffiliate";
 import { useState } from "react";
 import AffiliateForm from "./AffiliateForm";
 import { Affiliate } from "@/types/affiliate";
+import Link from "next/link";
 
 export default function AffiliateList() {
   const [page, setPage] = useState(1);
   const limit = 10;
 
-  const { data: affiliates, isLoading, isError } = useFetchAffiliates(page, limit);
+  const {
+    data: affiliates,
+    isLoading,
+    isError,
+  } = useFetchAffiliates(page, limit);
   const deleteAffiliate = useDeleteAffiliate();
-  const [editingAffiliate, setEditingAffiliate] = useState<Affiliate | null>(null);
+  const [editingAffiliate, setEditingAffiliate] = useState<Affiliate | null>(
+    null
+  );
 
-  if (isLoading) return <p className="mb-4 text-blue-100">Carregando afiliados...</p>;
-  if (isError) return <p className="text-red-500">Erro ao carregar afiliados.</p>;
+  if (isLoading)
+    return <p className="mb-4 text-blue-100">Carregando afiliados...</p>;
+  if (isError)
+    return <p className="text-red-500">Erro ao carregar afiliados.</p>;
 
   return (
     <div>
@@ -54,6 +63,12 @@ export default function AffiliateList() {
                     >
                       Excluir
                     </button>
+                    <Link
+                      href={`/affiliates/${affiliate.id}`}
+                      className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
+                    >
+                      Detalhes
+                    </Link>
                   </td>
                 </tr>
               ))}
@@ -68,7 +83,6 @@ export default function AffiliateList() {
           </table>
         </div>
 
-        
         <div className="flex justify-between items-center mt-4">
           <button
             disabled={page === 1}

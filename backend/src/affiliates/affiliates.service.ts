@@ -39,7 +39,7 @@ export class AffiliatesService {
         id: a.id,
         nome: a.nome,
         codigo: a.codigo,
-        totalIndicados: a.membersIndicados.length,
+        totalIndicados: a.membersIndicados,
       })),
       total,
       page,

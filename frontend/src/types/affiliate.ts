@@ -7,6 +7,13 @@ export type Affiliate = {
   totalIndicados?: Member[];
 };
 
+export type AffiliateFindId = {
+  id: number;
+  nome: string;
+  codigo: string;
+  membersIndicados: Member[];
+}
+
 
 export type AffiliateFormData = {
   nome: string;
