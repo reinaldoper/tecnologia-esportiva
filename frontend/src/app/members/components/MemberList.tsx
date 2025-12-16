@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useFetchMembers, useDeleteMember } from "@/hooks/useMembers";
 import MemberForm from "./MemberForm";
 import { Member } from "@/types/members";
+import Link from "next/link";
 
 export default function MemberList() {
   const [page, setPage] = useState(1);
@@ -52,6 +53,12 @@ export default function MemberList() {
                     >
                       Excluir
                     </button>
+                    <Link
+                      href={`/members/${member.id}`}
+                      className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
+                    >
+                      Detalhes
+                    </Link>
                   </td>
                 </tr>
               ))}

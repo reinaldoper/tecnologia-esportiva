@@ -22,7 +22,7 @@ export default function LoginPage() {
         initial={{ rotate: 0 }}
         animate={{ rotate: 360 }}
         transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
-        className="absolute top-10 left-10 opacity-10 text-green-500"
+        className="absolute top-10 left-10 opacity-10 text-green-800"
       >
         <FaFutbol size={250} />
       </motion.div>
