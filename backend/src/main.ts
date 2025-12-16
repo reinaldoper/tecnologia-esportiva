@@ -19,7 +19,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3000',
-      'https://tecnologia-esportiva.netlify.app/',
+      'https://tecnologia-esportiva.netlify.app',
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
